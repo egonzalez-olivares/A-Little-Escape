@@ -10,6 +10,6 @@ public class Flashlight_Collectable : MonoBehaviour {
 
     void Update()
     {
-        transform.Rotate();
+        transform.Rotate(new Vector3(0,5,0), 90.0f);
     }
 }
