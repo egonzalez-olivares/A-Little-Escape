@@ -6,24 +6,38 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour {
 
     public int collectedKeys;
-    public RawImage basementKey;
     public RawImage firstKey;
     public RawImage secondKey;
+    public RawImage thirdKey;
+    public Text doorUnlocked;
 
     private int totalKeys;
+    private float alpha;
 
 	// Use this for initialization
 	void Start () {
         collectedKeys = 0;
         totalKeys = 3;
+        doorUnlocked.text = "";
+
+        Color currColor = firstKey.color;
 	}
-	
-	public void KeyPickup()
+
+    private void Update()
+    {
+        if(collectedKeys == totalKeys)
+        {
+            doorUnlocked.text = "Door Unlocked!";
+        }
+    }
+
+    public void KeyPickup()
     {
         switch(collectedKeys)
         {
             case 1:
                 Debug.Log("First key");
+
                 break;
             case 2:
                 Debug.Log("Second key");
