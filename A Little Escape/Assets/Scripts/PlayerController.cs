@@ -5,16 +5,21 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public float moveSpeed;
-    public float speedY;
-    public float speedX;
+    public float jumpForce;
+    public float cameraSpeed;
+    public float jumpRate;
 
-    float yaw = 0.0f;
-    float pitch = 0.0f;
+
+    private Vector3 jump;
+    private float nextJump = 0;
+    private float yaw = 180.0f;
+    private float pitch = 0.0f;
     private Rigidbody rb;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
+        jump = new Vector3(0.0f, 2.0f, 0.0f);
 	}
 	
 	// Update is called once per frame
@@ -26,19 +31,19 @@ public class PlayerController : MonoBehaviour {
         Vector3 sidestep = transform.right * h * moveSpeed * Time.deltaTime;
         rb.MovePosition(rb.position + movement + sidestep);
 
-        /*
-        float turn = h * rotationSpeed * Time.deltaTime;
-        Quaternion rotation = Quaternion.Euler(0f, turn, 0f);
-
-        rb.MoveRotation(rb.rotation * rotation);
-        */
+        if(Input.GetKeyDown(KeyCode.Space) && Time.time > nextJump)
+        {
+            nextJump = Time.time + jumpRate;
+            rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+        }
 	}
 
     private void Update()
     {
-        yaw += speedX * Input.GetAxis("Mouse X");
-        pitch -= speedY * Input.GetAxis("Mouse Y");
+        yaw += cameraSpeed * Input.GetAxis("Mouse X");
+        pitch -= cameraSpeed * Input.GetAxis("Mouse Y");
 
         transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
+
     }
 }
