@@ -298,6 +298,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114006651545148272, guid: 37e7d86eae926354890f65135874e20c,
+        type: 2}
+      propertyPath: jumpForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114006651545148272, guid: 37e7d86eae926354890f65135874e20c,
+        type: 2}
+      propertyPath: nextJump
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114006651545148272, guid: 37e7d86eae926354890f65135874e20c,
+        type: 2}
+      propertyPath: jumpRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114006651545148272, guid: 37e7d86eae926354890f65135874e20c,
+        type: 2}
+      propertyPath: cameraSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37e7d86eae926354890f65135874e20c, type: 2}
   m_IsPrefabParent: 0
