@@ -55,3 +55,5 @@ MonoBehaviour:
   firstKey: {fileID: 0}
   secondKey: {fileID: 0}
   thirdKey: {fileID: 0}
+  doorUnlocked: {fileID: 0}
+  door: {fileID: 0}
