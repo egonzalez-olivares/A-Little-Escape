@@ -7,4 +7,9 @@ public class Flashlight_Collectable : MonoBehaviour {
     {
 
     }
+
+    void Update()
+    {
+        transform.Rotate();
+    }
 }
