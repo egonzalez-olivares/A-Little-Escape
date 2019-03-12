@@ -195,7 +195,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  rotationSpeed: 100
+  speedY: 5
+  speedX: 5
 --- !u!124 &124976964189626300
 Behaviour:
   m_ObjectHideFlags: 1
