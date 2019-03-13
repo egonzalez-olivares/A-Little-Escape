@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour {
     public float jumpForce;
     public float cameraSpeed;
     public float jumpRate;
+    public float maxPitch;
+    public float minPitch;
 
 
     private Vector3 jump;
@@ -42,8 +44,8 @@ public class PlayerController : MonoBehaviour {
     {
         yaw += cameraSpeed * Input.GetAxis("Mouse X");
         pitch -= cameraSpeed * Input.GetAxis("Mouse Y");
+        pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
 
-        transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
-
+        transform.eulerAngles = new Vector3( pitch, yaw, 0.0f);
     }
 }
