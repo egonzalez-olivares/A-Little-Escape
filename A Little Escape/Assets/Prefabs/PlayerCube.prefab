@@ -614,6 +614,8 @@ MonoBehaviour:
   jumpForce: 2
   cameraSpeed: 2
   jumpRate: 1
+  maxPitch: 90
+  minPitch: -45
 --- !u!124 &124976964189626300
 Behaviour:
   m_ObjectHideFlags: 1
