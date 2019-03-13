@@ -231,6 +231,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2474941}
   m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &2474945 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114078876361706154, guid: d43cce4adb9a02f40afa95ec74cf1497,
+    type: 2}
+  m_PrefabInternal: {fileID: 2474941}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &23392397
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,6 +698,11 @@ Prefab:
       propertyPath: door
       value: 
       objectReference: {fileID: 1035692415}
+    - target: {fileID: 114176878305016010, guid: 0a45adf2db6bc204eaada8aca899d9b9,
+        type: 2}
+      propertyPath: blackScreen
+      value: 
+      objectReference: {fileID: 2474945}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a45adf2db6bc204eaada8aca899d9b9, type: 2}
   m_IsPrefabParent: 0
