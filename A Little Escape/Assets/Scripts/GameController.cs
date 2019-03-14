@@ -12,13 +12,15 @@ public class GameController : MonoBehaviour {
     public RawImage thirdKey;
     public Text doorUnlocked;
     public Text winText;
+    public Text or;
     public GameObject door;
     public RawImage blackScreen;
+    public AudioSource ambience;
+    public AudioSource laugh;
 
     private int totalKeys;
     private float alpha;
     private float alphaScreen;
-    private bool endGame;
     
 
 	// Use this for initialization
@@ -33,7 +35,7 @@ public class GameController : MonoBehaviour {
         secondKey.CrossFadeAlpha(alpha, 0, true);
         thirdKey.CrossFadeAlpha(alpha, 0, true);
         blackScreen.CrossFadeAlpha(alphaScreen, 0, true);
-        endGame = false;
+        or.color = new Color(or.color.r, or.color.g, or.color.b, 0.0f);
     }
 
     private void Update()
@@ -71,16 +73,27 @@ public class GameController : MonoBehaviour {
     public void WinGame()
     {
         winText.text = "Congratulations!\n You escaped!";
-        //blackScreen.GetComponent<Image>().color = Color.Lerp(clear, black, fadeSpeed * Time.deltaTime);
         alphaScreen = 1.0f;
         Debug.Log("Fading to black...");
-        blackScreen.CrossFadeAlpha(alphaScreen, 3.0f, false);
+        blackScreen.CrossFadeAlpha(alphaScreen, 10.0f, false);
+        ambience.volume = Mathf.Lerp(1, 0, Time.deltaTime);
+        StartCoroutine(FadeIn(or));
         StartCoroutine(Restart());
+    }
+
+    IEnumerator FadeIn(Text or)
+    {
+        yield return new WaitForSeconds(3);
+        laugh.Play();
+        while (or.color.a < 1.0f)
+        {
+            or.color = new Color(or.color.r, or.color.g, or.color.b, or.color.a + (Time.deltaTime / 6.0f));
+        }
     }
 
     IEnumerator Restart()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(10);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     
