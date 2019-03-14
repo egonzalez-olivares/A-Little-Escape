@@ -15,6 +15,9 @@ public class GameController : MonoBehaviour {
     public GameObject door;
     public RawImage blackScreen;
 
+    public AudioSource keyJingleSource;
+    public AudioClip keyJingleClip;
+
     private int totalKeys;
     private float alpha;
     private float alphaScreen;
@@ -34,6 +37,8 @@ public class GameController : MonoBehaviour {
         thirdKey.CrossFadeAlpha(alpha, 0, true);
         blackScreen.CrossFadeAlpha(alphaScreen, 0, true);
         endGame = false;
+
+        keyJingleSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -50,7 +55,8 @@ public class GameController : MonoBehaviour {
     public void KeyPickup()
     {
         alpha = 1.0f;
-        switch(collectedKeys)
+        keyJingleSource.PlayOneShot(keyJingleClip);
+        switch (collectedKeys)
         {
             case 1:
                 Debug.Log("First key");
