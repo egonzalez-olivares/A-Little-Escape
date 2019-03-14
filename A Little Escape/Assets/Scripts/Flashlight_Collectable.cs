@@ -16,10 +16,9 @@ public class Flashlight_Collectable : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("First collision");
         if (collision.collider.tag == "Player")
         {
-            Debug.Log("Collision!");
+            Debug.Log("Picked up flashlight");
             // Enable FlashlightPlayer
             FlashlightPlayer.gameObject.SetActive(true);
 

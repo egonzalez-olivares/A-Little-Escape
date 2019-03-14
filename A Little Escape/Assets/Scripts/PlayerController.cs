@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
 
     private Vector3 jump;
     private float nextJump = 0;
-    private float yaw = 180.0f;
+    private float yaw = -16.0f;
     private float pitch = 0.0f;
     private Rigidbody rb;
 
