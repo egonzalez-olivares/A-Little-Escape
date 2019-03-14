@@ -2431,14 +2431,14 @@ MeshFilter:
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33981363494082274
 MeshFilter:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1157010256072518}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!54 &54111121951531628
 Rigidbody:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1038645445585704}
@@ -2453,7 +2453,7 @@ Rigidbody:
   m_CollisionDetection: 0
 --- !u!54 &54148850589226384
 Rigidbody:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1227507278001906}
@@ -2468,7 +2468,7 @@ Rigidbody:
   m_CollisionDetection: 0
 --- !u!54 &54520703788032032
 Rigidbody:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1663919524108360}
@@ -2483,7 +2483,7 @@ Rigidbody:
   m_CollisionDetection: 0
 --- !u!54 &54808463173148426
 Rigidbody:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1127903160135714}
@@ -2498,7 +2498,7 @@ Rigidbody:
   m_CollisionDetection: 0
 --- !u!54 &54868560239391124
 Rigidbody:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1694932775176942}
@@ -2513,7 +2513,7 @@ Rigidbody:
   m_CollisionDetection: 0
 --- !u!54 &54885986819696002
 Rigidbody:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1861296895653306}
@@ -2528,7 +2528,7 @@ Rigidbody:
   m_CollisionDetection: 0
 --- !u!54 &54963491125446762
 Rigidbody:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1576214199352336}
@@ -2543,7 +2543,7 @@ Rigidbody:
   m_CollisionDetection: 0
 --- !u!65 &65050477540037424
 BoxCollider:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1835360287251280}
