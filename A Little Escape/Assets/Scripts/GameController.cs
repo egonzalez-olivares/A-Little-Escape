@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -74,5 +75,13 @@ public class GameController : MonoBehaviour {
         alphaScreen = 1.0f;
         Debug.Log("Fading to black...");
         blackScreen.CrossFadeAlpha(alphaScreen, 3.0f, false);
+        StartCoroutine(Restart());
     }
+
+    IEnumerator Restart()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    
 }
