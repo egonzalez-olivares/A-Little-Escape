@@ -221,3 +221,5 @@ MonoBehaviour:
   winText: {fileID: 0}
   door: {fileID: 0}
   blackScreen: {fileID: 0}
+  keyJingleSource: {fileID: 82664944918478230}
+  keyJingleClip: {fileID: 8300000, guid: b9c5ce0ba8d79b74e9c305772836b04a, type: 3}
