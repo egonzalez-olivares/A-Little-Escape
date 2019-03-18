@@ -21,7 +21,7 @@ public class Painting : MonoBehaviour {
     {
         if (other.tag == "Player" && !paintingTriggered)
         {
-            int chance = Random.Range(1, 50);
+            int chance = Random.Range(1, 10);
 
             Debug.Log("chance = " + chance);
             if (chance == 5)
