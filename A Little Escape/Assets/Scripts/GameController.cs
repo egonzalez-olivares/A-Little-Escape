@@ -38,7 +38,6 @@ public class GameController : MonoBehaviour {
         secondKey.CrossFadeAlpha(alpha, 0, true);
         thirdKey.CrossFadeAlpha(alpha, 0, true);
         blackScreen.CrossFadeAlpha(alphaScreen, 0, true);
-        endGame = false;
         or.color = new Color(or.color.r, or.color.g, or.color.b, 0.0f);
         
         keyJingleSource = GetComponent<AudioSource>();
